@@ -1,0 +1,34 @@
+# Arquivos gerados pelo Maven
+target/
+
+# Arquivos de configuração do Eclipse
+.classpath
+.project
+
+# Diretório de saída do Eclipse
+bin/
+
+# Arquivos de configuração do IntelliJ IDEA
+.idea/
+
+# Arquivos temporários
+*.log
+
+# Arquivos de configuração do sistema
+*.iml
+*.ipr
+*.iws
+
+# Dependências do Maven
+/.mvn
+.mvn
+
+# Arquivos de log
+log/
+*.log
+
+# Arquivos de compilação
+*.class
+
+# Diretório de saída do Maven
+/bin/
