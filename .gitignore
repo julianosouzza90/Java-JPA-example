@@ -1,6 +1,6 @@
 # Arquivos gerados pelo Maven
 target/
-
+/target/
 # Arquivos de configuração do Eclipse
 .classpath
 .project
@@ -32,3 +32,4 @@ log/
 
 # Diretório de saída do Maven
 /bin/
+ 
