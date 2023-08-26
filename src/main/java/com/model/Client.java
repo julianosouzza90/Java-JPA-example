@@ -7,18 +7,21 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "categories")
-public class Category {
+@Table(name = "clients")
+public class Client {
   
+
   @Id
-  @GeneratedValue(strategy =  GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
 
   private String name;
 
-  public Category(){}
 
-  public Category(String name) {
+
+  public Client(){}
+
+  public Client(String name){
     this.name = name;
   }
 

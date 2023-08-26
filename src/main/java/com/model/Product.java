@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,15 +27,17 @@ public class Product {
 
 
 
+  @ManyToOne
   private Category category;
-  
+
   public Product(){}
 
-  public Product(String name, String description, BigDecimal price){ 
+  public Product(String name, String description, BigDecimal price, Category category){ 
     this.name = name;
     this.description = description;
     this.price = price;
     this.created_at = LocalDate.now();
+    this.category = category;
   }
 
   public void listAll() {
@@ -47,7 +50,9 @@ public class Product {
   public String toString() {
     DecimalFormat decimalFormat = new DecimalFormat("#,##0.00");
     return "Produto: " + this.name + "\n Descrição: " +
-     this.description +  "\n Valor: " + decimalFormat.format(this.price);
+     this.description +  "\n Valor: " + decimalFormat.format(this.price) +
+     "\n Categoria: " + this.category.getName();
+
     
   }
 }
